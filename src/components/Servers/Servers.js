@@ -19,6 +19,7 @@ class Servers extends React.Component{
 
 
     filter=(type)=>{
+        //TODO: Can we filter the list without rebuilding the entire state?
      const copy = this.props.servers.filter(server => server.status == type)
      this.setState({clicked:true,copyServers:copy})
     }
